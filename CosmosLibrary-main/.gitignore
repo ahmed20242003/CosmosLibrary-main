@@ -1,0 +1,24 @@
+PROJECT_CONTEXT.md
+
+# Seed scripts
+backend/seed_books.py
+scratch/
+
+# Environments
+# .env
+# backend/venv/
+# venv/
+# ENV/
+
+# # Python
+# __pycache__/
+# *.pyc
+# *.pyo
+# *.pyd
+
+# # Database
+# backend/db.sqlite3
+
+# # Static / Media
+# backend/static/assets/books/
+# backend/static/assets/pdf/

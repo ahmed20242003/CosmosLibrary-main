@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Page - CosmosLib</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'css/shared-nav.css' %}">
+</head>
+
+<body>
+    <nav class="top-nav-glass">
+        <div class="nav-brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            CosmosLib
+        </div>
+        <div class="nav-links">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'books' %}">Books</a>
+            <a href="{% url 'search' %}" class="active">Search</a>
+        </div>
+        <div class="topbar-right" style="display:flex; align-items:center; gap: 15px;">
+            <a href="{% url 'login_page' %}" style="color: white; text-decoration: none; font-weight: 500;">Login</a>
+            <a href="{% url 'login_page' %}#register" class="btn-primary">Signup</a>
+        </div>
+    </nav>
+
+    <h2 align='center'>search page</h2>
+    <center>
+        <label for="book">search for your favourite book </label>
+
+        <select name=book id="book" multiple>
+            <div>
+                <optgroup label="romantic"></optgroup>
+                <option value="Pride and Prejudice">Pride and Prejudice</option>
+                <option value="هيبتا">هيبتا</option>
+                <option value="The Notebook">The Notebook</option>
+                <option value="Me Before You">Me Before You</option>
+                <option value="في قلبي أنثى عبرية">في قلبي أنثى عبرية</option>
+
+            </div>
+
+            <div>
+                <optgroup label="historical"></optgroup>
+                <option value="البداية والنهاية">البداية والنهاية</option>
+                <option value="قصه الحضاره">قصه الحضاره</option>
+                <option value="Pride and Prejudice">Pride and Prejudice</option>
+                <option value="Sapiens: A Brief History of Humankind">Sapiens: A Brief History of Humankind</option>
+                <option value="مقدمة ابن خلدون">مقدمة ابن خلدون</option>
+                <option value="Guns, Germs and Steel">Guns, Germs and Steel</option>
+
+
+            </div>
+            <div>
+                <optgroup label="progamming"></optgroup>
+                <option value="Clean Code">Clean Code</option>
+                <option value="Introduction to Algorithms">Introduction to Algorithms</option>
+                <option value="HTML and CSS: Design and Build Websites">HTML and CSS: Design and Build Websites</option>
+                <option value="Python Crash Course">Python Crash Course</option>
+                <option value="Head First Java">Head First Java</option>
+
+
+            </div>
+            <div>
+                <optgroup label="Religious"></optgroup>
+                <option value="رياض الصالحين">رياض الصالحين </option>
+                <option value="لا تحزن ">لا تحزن </option>
+                <option value="فقه السنه">فقه السنه</option>
+                <option value="الرحيق المختوم">الرحيق المختوم</option>
+
+            </div>
+        </select>
+        <br>
+        <button>Search</button>
+        <br>
+
+        <!-- Removed hardcoded local path image -->
+    </center>
+    <footer>
+
+        <h3>Contact Us</h3>
+        <p>Email: library@gmail.com</p>
+        <p>Phone: 01207908150</p>
+        <p>Address: Cairo, Egypt</p>
+
+        <h3>Feedback</h3>
+        <form>
+            <textarea rows="6" cols="50" placeholder="your feedback"></textarea><br><br>
+            <input type="submit">
+        </form>
+
+        <h3>About</h3>
+        <p>Our online library provides a collection of books in different fields such as programming,history,religion
+            and romantic.</p>
+        <p>© 2026 Online Library</p>
+    </footer>
+</body>
+
+</html>
